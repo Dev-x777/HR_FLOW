@@ -1,0 +1,76 @@
+@import "tailwindcss";
+
+@theme {
+  /* Canvas & panels */
+  --color-canvas-bg: #141414;
+  --color-panel-bg: #1c1c1c;
+  --color-panel-border: #2a2a2a;
+
+  /* Accent */
+  --color-primary: #4F6EF7;
+  --color-primary-hover: #6680ff;
+
+  /* Text */
+  --color-text-main: #e8e8e8;
+  --color-text-muted: #888;
+
+  /* Node accent colors — kept intentional but softened */
+  --color-node-start: #34d399;
+  --color-node-task: #60a5fa;
+  --color-node-approval: #fbbf24;
+  --color-node-auto: #a78bfa;
+  --color-node-end: #f87171;
+
+  --font-sans: "Inter", system-ui, sans-serif;
+}
+
+:root {
+  --background: #141414;
+  --foreground: #e8e8e8;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* React Flow controls — clean minimal style */
+.react-flow__panel { color: #e8e8e8; }
+.react-flow__controls {
+  border: 1px solid #2a2a2a !important;
+  border-radius: 8px !important;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.4) !important;
+}
+.react-flow__controls-button {
+  background-color: #1c1c1c !important;
+  border-bottom: 1px solid #2a2a2a !important;
+  color: #888 !important;
+  fill: #888 !important;
+  transition: background 0.15s, color 0.15s;
+}
+.react-flow__controls-button:hover {
+  background-color: #252525 !important;
+  color: #e8e8e8 !important;
+  fill: #e8e8e8 !important;
+}
+
+/* Sidebar panel — solid, no blur */
+.glass-panel {
+  background: #1c1c1c;
+  border-color: #2a2a2a;
+}
+
+.custom-drag-handle { cursor: grab; }
+.custom-drag-handle:active { cursor: grabbing; }
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: #333; border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: #444; }
